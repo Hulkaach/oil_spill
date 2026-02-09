@@ -11,7 +11,7 @@ flowchart LR
     end
 
     ENV -->|env vars| Spring[Spring Boot]
-    YAML -->|${JDBC_URL} ${DB_USER}| Spring
+    YAML -->|placeholders: JDBC_URL, DB_USER| Spring
 
     ENV -->|env vars| Docker[Docker Compose]
     DOCKER --> Docker
